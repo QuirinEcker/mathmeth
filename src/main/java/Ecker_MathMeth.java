@@ -28,7 +28,12 @@ public class Ecker_MathMeth {
         System.out.printf("Der wert %d ist umgedreht %d \n", value1 , exchangeNumbers(value1));
         System.out.printf("Die Fakultaet von %d ist %d \n", value1, fakulaet(value1));
 
-        System.out.println(dec(value1));
+        System.out.println();
+        System.out.print("Geben Sie eine binäre Zahl ein:");
+        value1 = scanner.nextInt();
+
+        System.out.printf("Die deizimal Zahl von %db ist %dd \n", value1, dec(value1));
+
 
     }
 
@@ -119,34 +124,6 @@ public class Ecker_MathMeth {
 
         }
         return equal;
-    }
-
-    public static int bin(int value1) {
-
-        int decimal;
-        int res = 0;
-        int zweierPotenz = 1;
-
-        do {
-            if (value1 > 0){
-                decimal = value1;
-                zweierPotenz = 1;
-                do {
-                    res = decimal / zweierPotenz;
-                    if (res > 1) {
-                        zweierPotenz = zweierPotenz * 2;
-                    }
-                } while (res > 1);
-
-                while (zweierPotenz >= 1){
-                    res = decimal / zweierPotenz;
-                    decimal = decimal % zweierPotenz;
-                    zweierPotenz /= 2;
-                }
-            }
-            value1--;
-        } while (value1 != 0);
-        return res;
     }
 
     public  static int dec(int value1) {
